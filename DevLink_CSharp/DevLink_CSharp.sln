@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevLink_CSharp", "DevLink_CSharp\DevLink_CSharp.csproj", "{1124A3AC-64D6-4447-AD8E-A14CF8E6FF9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevLinkWrapper", "DevLinkWrapper\DevLinkWrapper.csproj", "{013B50A2-3B1D-4D54-81D3-CB998EFF9DB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1124A3AC-64D6-4447-AD8E-A14CF8E6FF9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1124A3AC-64D6-4447-AD8E-A14CF8E6FF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1124A3AC-64D6-4447-AD8E-A14CF8E6FF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1124A3AC-64D6-4447-AD8E-A14CF8E6FF9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{013B50A2-3B1D-4D54-81D3-CB998EFF9DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{013B50A2-3B1D-4D54-81D3-CB998EFF9DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{013B50A2-3B1D-4D54-81D3-CB998EFF9DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{013B50A2-3B1D-4D54-81D3-CB998EFF9DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

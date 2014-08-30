@@ -39,7 +39,7 @@ Public Class Fconsole
     End Sub
 
     Private Sub CallsBack(seender As Object, e As DevLinkNet.CommsEvents_Parameter.CommEvent)
-        AggiornaVideo(e.comm_state, Color.Green)
+        AggiornaVideo(e.comm_state, Color.LightGreen)
     End Sub
 
     Private Sub StatoConnessione(sender As Object, e As DevLinkNet.Connection_Parameter.Connection_Status_Paramenter)

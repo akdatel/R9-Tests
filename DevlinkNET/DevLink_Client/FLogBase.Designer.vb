@@ -44,7 +44,7 @@ Partial Class FLogBase
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(760, 166)
         Me.Controls.Add(Me.RichTextBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Name = "FLogBase"
         Me.Text = "FLogBase"
         Me.ResumeLayout(False)

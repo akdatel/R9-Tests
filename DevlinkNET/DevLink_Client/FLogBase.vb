@@ -1,5 +1,6 @@
 ﻿Imports DelinkNET
 Imports System.Threading
+
 Public Class FLogBase
     Dim ipo As DevLinkNet.Devlink
 
@@ -35,13 +36,14 @@ Public Class FLogBase
             End Try
         End If
     End Sub
+
     Private Sub CallsLog(sender As Object, e As DevLinkNet.CallLogEvent_Parameter.CallLog_Base_Parameter)
         'UpdateVideo("PBX : " & pbxh.ToString & " - " & info, Color.LightGreen)
         Dim param As CallLogParameterBase = New CallLogParameterBase
         Try
             param.IdPbx = e.IdPbx
             param.LogInfo = e.LogInfo
-            param.color = Color.Green
+            param.color = Color.LightGreen
         Catch ex As Exception
             MsgBox("[CallsLog] - Errore : " & ex.Message)
         End Try
@@ -57,7 +59,4 @@ Public Class FLogBase
         AddHandler ipo.CallLog_Event, AddressOf CallsLog
     End Sub
 
-    Private Sub RichTextBox1_TextChanged(sender As System.Object, e As System.EventArgs) Handles RichTextBox1.TextChanged
-
-    End Sub
 End Class

@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfIpOffice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfIpOffice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IpOffice>
+    <IpoAddress>10.10.10.51</IpoAddress>
+    <IpoPassword>password</IpoPassword>
+    <IpoID>1</IpoID>
+    <IpoEnabled>true</IpoEnabled>
+  </IpOffice>
+  <IpOffice>
+    <IpoAddress>10.10.10.52</IpoAddress>
+    <IpoPassword>password</IpoPassword>
+    <IpoID>2</IpoID>
+    <IpoEnabled>false</IpoEnabled>
+  </IpOffice>
+  <IpOffice>
+    <IpoAddress>10.10.10.55</IpoAddress>
+    <IpoPassword>password</IpoPassword>
+    <IpoID>3</IpoID>
+    <IpoEnabled>false</IpoEnabled>
+  </IpOffice>
+</ArrayOfIpOffice>

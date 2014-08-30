@@ -56,7 +56,7 @@ Namespace DevLinkNet
 
         ' 
         Private oCallLogEvent As CALLLOGEVENT = AddressOf CallEvent
-        Private oCommsEvent As COMMSEVENT = AddressOf CommEvent
+        Private oCommsEvent As COMMSEVENT = AddressOf OOCommsEvent
 
 
         ' Definizione delle API unmanaged
@@ -191,7 +191,7 @@ Namespace DevLinkNet
             Try
                 PConn.IdPbx = idPbx
                 PConn.ErrorLevel = Connection_Enum.ErrorLevel.info
-                PConn.StatusMessage = "Connection in progress..."
+                PConn.StatusMessage = "Connection in progress... " + PbxAddress
                 PConn.Status = CommsEvent_Enum.CommsEvent_State.DEVLINK_COMMS_OPERATIONAL
 
                 RaiseEvent ConnectionStatus(Me, PConn)
@@ -212,6 +212,8 @@ Namespace DevLinkNet
                     Application.DoEvents()
 
                 Loop While Not bIsConnect And Not bIsInterrupt
+
+                ' TODO: If bIsInterrupt = True THEN Return !
 
                 iRet = DLRegisterType2CallDeltas(New IntPtr(idPbx), oCallLogEvent)
 
@@ -276,7 +278,7 @@ Namespace DevLinkNet
 
 
 
-        Private Sub CommEvent(ByVal pbxh As IntPtr, ByVal comms_state As Integer, ByVal parm1 As Integer)
+        Private Sub OOCommsEvent(ByVal pbxh As IntPtr, ByVal comms_state As Integer, ByVal parm1 As Integer)
             Dim e As CommsEvents_Parameter.CommEvent = New CommsEvents_Parameter.CommEvent
             Dim e1 As Connection_Parameter.Connection_Status_Paramenter = New Connection_Parameter.Connection_Status_Paramenter
 

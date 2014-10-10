@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="UCCS_UI_Test.AgentCompactControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="160" d:DesignWidth="330">
+    <Border Margin="10, 10, 10, 10" BorderBrush="Gray" BorderThickness="2" CornerRadius="3">
+        <Grid x:Name="ContentGrid" Background="{Binding }" Width="310" Height="140">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="0" Margin="6">
+                <Label x:Name="AgentNameLabel"  Content="{Binding 
+                       ElementName=MyWindow, 
+                       Path=DataContext.Name}"
+                       FontWeight="Bold" FontSize="15" FontFamily="Arial" ></Label>
+                <Label x:Name="AgentStatusLabel" FontSize="12" FontFamily="Arial" >Busy for 00:03:33</Label>
+                <Label x:Name="PhoneNumberOnCallLabel" FontSize="20" FontFamily="Arial" Padding="3,10,3,3">555 - 555 - 5555</Label>
+            </StackPanel>
+
+            <Grid Grid.Row="0" Grid.Column="1" Margin="0,6,6,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Padding="2, 1, 3, 2">Idle:</Label>
+                <Label Grid.Row="0" Grid.Column="1" x:Name ="TimeIdle" Padding="2, 1, 3, 2">00:00:00</Label>
+                <Label Grid.Row="1" Grid.Column="0" Padding="2, 1, 3, 2">Handle:</Label>
+                <Label Grid.Row="1" Grid.Column="1" x:Name ="TimeHandle" Padding="2, 1, 3, 2">00:00:00</Label>
+                <Label Grid.Row="2" Grid.Column="0" Padding="2, 1, 3, 2">Busy:</Label>
+                <Label Grid.Row="2" Grid.Column="1" x:Name ="TimeBusy" Padding="2, 1, 3, 2">00:00:00</Label>
+                <Label Grid.Row="3" Grid.Column="0" Padding="2, 1, 3, 2">DND:</Label>
+                <Label Grid.Row="3" Grid.Column="1" x:Name ="TimeDnd" Padding="2, 1, 3, 2">00:00:00</Label>
+                <Label Grid.Row="4" Grid.Column="0" Padding="2, 1, 3, 2">Una:</Label>
+                <Label Grid.Row="4" Grid.Column="1" x:Name ="TimeUnav" Padding="2, 1, 3, 2">00:00:00</Label>
+            </Grid>
+
+            <!-- TODO: change maybe to Grid so the text is centered and evenly distributed. -->
+            <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Label>Group calls: </Label>
+                <Label x:Name="CallsGroup">10</Label>
+                <Label>Missed calls:</Label>
+                <Label x:Name="CallsMissed">10</Label>
+                <Label>Outbound calls:</Label>
+                <Label x:Name="CallsOutbound">10</Label>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</UserControl>
